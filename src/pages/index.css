@@ -1,0 +1,83 @@
+/* 标题 */
+.hero__title__custom{
+    font-size: 42px;
+    color: var(--ifm-color-primary-darkest) !important; 
+    text-shadow: 0 0 10px white, 0 0 20px white, 0 0 50px white, 0 0 100px white, 0 0 200px white;
+}
+
+/* 描述信息 */
+.intro__description{
+    font-size: 1.4rem;
+    padding: 20px 0;
+    color: black;
+    text-align: center;
+}
+
+.intro__description p{
+    color: var(--ifm-color-primary-darkest);
+    position: relative;
+    margin: auto;
+    word-spacing: 0.2em;
+    display: inline-block;
+    line-height: 1.5;
+    white-space: nowrap;
+    color: transparent;
+    background-color: black;
+    background-clip: text;
+}
+
+.intro__description p::after {
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    background-image: linear-gradient(120deg, transparent 0%, transparent 6rem, white 11rem, transparent 11.15rem, transparent 15rem, rgba(255, 255, 255, 0.3) 20rem, transparent 25rem, transparent 27rem, rgba(255, 255, 255, 0.6) 32rem, white 33rem, rgba(255, 255, 255, 0.3) 33.15rem, transparent 38rem, transparent 40rem, rgba(255, 255, 255, 0.3) 45rem, transparent 50rem, transparent 100%);
+    background-clip: text;
+    background-size: 150% 100%;
+    background-repeat: no-repeat;
+    animation: shine 6s infinite linear;
+}
+
+@keyframes shine {
+    0% {
+        background-position: 190% 0;
+    }
+    100% {
+        background-position: -190% 0;
+    }
+}
+
+/* 按钮 */
+.intro__buttons {
+    margin-top: 3rem;
+    width: 100%;;
+    display: flex;
+    justify-content: space-around;
+}
+.intro__button {
+    width: 200px;
+}
+.button_start{
+    background-color: #fbfbfb !important; 
+    color: #8474e7 !important;
+    margin-right: 15px;
+}
+.btn_no_border{
+    border: none !important;
+}
+.button{
+    background-color: #8474e7;
+    border: var(--ifm-button-border-width) solid var(--ifm-color-primary-darker);
+    border-radius: var(--ifm-button-border-radius);
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: var(--ifm-button-font-weight);
+    line-height: 1.5;
+    padding: 10px 0;
+    text-align: center;
+    user-select: none;
+    white-space: nowrap;
+}
